@@ -324,6 +324,7 @@ main{
   min-height: 100vh;
   background-color: antiquewhite;
   padding: 10px;
+  padding-top: 100px;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -332,6 +333,7 @@ main{
 
 .card{
   min-height: 200px;
+  max-height: 400px;
   width: 250px;
   border: 2px solid black;
   box-shadow: 0 0 10px gray;
@@ -357,4 +359,32 @@ main{
 .card h2, .card h3{
   padding: 0 0 5px 0;
   text-align: center;
+}
+
+.loading{
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search{
+  position: absolute;
+  transform: translateY(-90px);
+}
+
+.search h4{
+  padding-top: 10px;
+}
+
+.search h5{
+  font-size: 20px;
+  margin-top: -15px;
+  text-align: center;
+}
+
+.search input{
+  padding: 4px;
+  font-size: 15px;
+  border-radius: 4px;
 }
