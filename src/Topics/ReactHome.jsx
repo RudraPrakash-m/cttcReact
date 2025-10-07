@@ -8,6 +8,8 @@ import React from "react";
 // import Iterator from "./Iterators/Iterator";
 // import Bio from "./Task/Bio";
 import UseEffect from "./Hooks/useEffect/UseEffect";
+import Nav from "./Hooks/useEffect/Nav";
+import Project1 from "./TaskOnAPIfetch/Project1";
 
 const ReactHome = () => {
   return (
@@ -47,7 +49,16 @@ const ReactHome = () => {
     // </main>
 
     //! useEffect
-    <UseEffect />
+    // <main>
+    //   <Nav/>
+    //   <UseEffect />
+    // </main>
+
+    //! API Fetch Task
+
+    <main>
+      <Project1/>
+    </main>
   );
 };
 
