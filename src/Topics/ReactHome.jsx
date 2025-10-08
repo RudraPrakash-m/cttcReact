@@ -10,8 +10,49 @@ import React from "react";
 import UseEffect from "./Hooks/useEffect/UseEffect";
 import Nav from "./Hooks/useEffect/Nav";
 import Project1 from "./TaskOnAPIfetch/Project1";
+import Layout from "./ReactRouter/Layout";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Home from "./ReactRouter/pages/Home";
+import About from "./ReactRouter/pages/About";
+import Contact from "./ReactRouter/pages/Contact";
+import Services from "./ReactRouter/pages/Services";
+import Login from "./ReactRouter/pages/Login";
+import Register from "./ReactRouter/pages/Register";
 
 const ReactHome = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home/>,
+        },
+        {
+          path:"/about",
+          element:<About/>
+        },
+        {
+          path:"/contact",
+          element:<Contact/>
+        },
+        {
+          path:"/services",
+          element:<Services/>
+        },
+        {
+          path:"/login",
+          element:<Login/>
+        },
+        {
+          path:"/register",
+          element:<Register/>
+        }
+      ],
+    },
+  ]);
   return (
     //! components
     // <>
@@ -56,8 +97,14 @@ const ReactHome = () => {
 
     //! API Fetch Task
 
+    // <main>
+    //   <Project1/>
+    // </main>
+
+    //! react rouer
+
     <main>
-      <Project1/>
+      <RouterProvider router={router}></RouterProvider>
     </main>
   );
 };

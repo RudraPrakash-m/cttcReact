@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Cards from "./Cards";
-import Loading from "./Loading";
+import Cards from "./components/Cards";
+import Loading from "./components/Loading";
 
 const Project1 = () => {
   const [data, setData] = useState([]);
@@ -21,7 +21,13 @@ const Project1 = () => {
     fetchData();
   }, []);
 
-  return <>{loading ? <Cards users={data} /> : <Loading />}</>;
+  return (
+
+    <>
+      {loading ? <Cards users={data} /> : <Loading />}
+    </>
+
+  )
 };
 
 export default Project1;

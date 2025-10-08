@@ -16,6 +16,8 @@ const Cards = ({ users }) => {
 
   const handleInput = (e) => {
   const { name, value } = e.target;
+  // console.log(value);
+  
 
   setValue(value)
 
@@ -23,16 +25,25 @@ const Cards = ({ users }) => {
     common.toLowerCase().includes(value.toLowerCase())
   );
 
-  console.log(fData);
+  // console.log(fData);
   setFilterData(fData);
 };
-
 
   return (
     <>
       <div className="search">
         <form action="" onSubmit={handleForm}>
           <input type="text" name="search" id="" placeholder="Search Country Name" onChange={handleInput} />
+          <select name="" id="" className="select" onChange={handleInput}>
+            <option value="">Country Name</option>
+            {
+              user.map(({name:{common}},index)=>{
+                return(
+                  <option value={common} key={index}>{common}</option>
+                )
+              })
+            }
+          </select>
           {value===""?"":(
             <>
             <h4>You are searching for : <strong>{value}</strong></h4>
