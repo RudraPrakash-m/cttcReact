@@ -422,6 +422,7 @@ nav{
   box-shadow: 0 0 10px gray;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 nav>.logo{
@@ -457,13 +458,14 @@ nav>.list{
 }
 
 .btn{
-  width: 15%;
+  width: 20%;
   /* border: 2px solid red; */
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+
 
 nav button{
   padding: 10px 20px;
@@ -492,4 +494,154 @@ main>div{
   align-items: center;
   font-size: 50px;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.service-page{
+  height: calc(100vh - 60px);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-page>.left-side{
+  width: 19%;
+  height: 100%;
+  border-right: 2px solid black;
+  padding-right: 10px;
+}
+
+.service-page>.right-side{
+  width: 80%;
+  height: 100%;
+}
+
+
+.service-page ul{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+.service-page ul li{
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 0 0 5px gray;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.service-link{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-container {
+  width: 300px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #007bff;
+}
+
+.username {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.user-type {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.profile-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover {
+  background-color: #0056b3;
+}
+
+.info-section {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.info-section p {
+  margin: 6px 0;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 50px;
+  color: #555;
 }

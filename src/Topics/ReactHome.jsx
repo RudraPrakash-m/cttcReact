@@ -19,6 +19,10 @@ import Contact from "./ReactRouter/pages/Contact";
 import Services from "./ReactRouter/pages/Services";
 import Login from "./ReactRouter/pages/Login";
 import Register from "./ReactRouter/pages/Register";
+import ErrorPage from "./ReactRouter/pages/ErrorPage";
+import WebDev from "./ReactRouter/pages/services/WebDev";
+import Cons from "./ReactRouter/pages/services/Cons";
+import HomeDelivery from "./ReactRouter/pages/services/HomeDelivery";
 
 const ReactHome = () => {
   const router = createBrowserRouter([
@@ -27,7 +31,7 @@ const ReactHome = () => {
       element: <Layout />,
       children: [
         {
-          path: "/",
+          path: "",
           element: <Home/>,
         },
         {
@@ -40,7 +44,21 @@ const ReactHome = () => {
         },
         {
           path:"/services",
-          element:<Services/>
+          element:<Services/>,
+          children:[
+            {
+              path:"/services",
+              element:<WebDev/>
+            },
+            {
+              path:"/services/con",
+              element:<Cons/>
+            },
+            {
+              path:"/services/homeD",
+              element:<HomeDelivery/>
+            }
+          ]
         },
         {
           path:"/login",
@@ -51,6 +69,7 @@ const ReactHome = () => {
           element:<Register/>
         }
       ],
+      errorElement: <ErrorPage/>
     },
   ]);
   return (
