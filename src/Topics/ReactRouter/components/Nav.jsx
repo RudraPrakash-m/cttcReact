@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <nav>
       <div className="logo">
-        <h1>LOGO</h1>
+        <h1>ERROR</h1>
       </div>
       <div className="list">
         <ul>
@@ -26,7 +26,7 @@ const Nav = () => {
                 isActive ? "nav-link active" : "nav-link"
               }
             >
-              About
+              Users
             </NavLink>
           </li>
           <li>

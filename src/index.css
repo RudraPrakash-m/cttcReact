@@ -404,132 +404,142 @@ nav>.btn{
   margin-left: 30px;
 } */
 
-
 /*! react router */
 
-main{
-  height: 100vh;
+main {
+  height: auto;
   width: 100%;
+  background-color: #1e222a;
+  color: #c9d1d9;
   /* background-color: antiquewhite; */
 }
 
-
-nav{
+/*! Navbar main container */
+nav {
+  display: flex;
   height: 60px;
-  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0d1117;
+  padding: 15px 40px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
-  box-shadow: 0 0 10px gray;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 1000;
 }
 
-nav>.logo{
-  width: 10%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border: 2px solid red; */
+/* Logo styling */
+.logo h1 {
+  font-size: 1.8rem;
+  color: #58a6ff;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-nav>.list{
-  width: 30%;
-  height: 100%;
-  /* border: 2px solid red; */
-
-}
-
-.list>ul{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* Nav list */
+.list ul {
   list-style: none;
-}
-
-.list li{
-  cursor: pointer;
-  text-transform: capitalize;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.btn{
-  width: 20%;
-  /* border: 2px solid red; */
-  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
-
-nav button{
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 10px;
+.list li {
+  text-transform: capitalize;
 }
 
-nav ul li a {
+/* Nav links */
+.nav-link {
   text-decoration: none;
-  color: #333;
+  color: #c9d1d9;
+  font-size: 1rem;
   font-weight: 500;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #58a6ff;
 }
 
 .nav-link.active {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
+  color: #58a6ff;
+  border-bottom: 2px solid #58a6ff;
+  padding-bottom: 3px;
 }
 
-main>div{
-  height: calc(100vh - 60px) ;
+/* Buttons */
+.btn button {
+  background-color: #238636;
+  border: none;
+  color: white;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn button:hover {
+  background-color: #2ea043;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .list ul {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .btn {
+    margin-top: 15px;
+  }
+}
+
+main > div {
+  height: calc(100vh - 60px);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 50px;
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.service-page{
+/*! service page */
+.service-page {
   height: calc(100vh - 60px);
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.service-page>.left-side{
+.service-page > .left-side {
   width: 19%;
   height: 100%;
   border-right: 2px solid black;
-  padding-right: 10px;
+  padding: 0 10px 0 10px;
 }
 
-.service-page>.right-side{
+.service-page > .right-side {
   width: 80%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.service-page ul{
+.service-page ul {
   height: 100%;
   width: 100%;
   display: flex;
@@ -538,110 +548,229 @@ main>div{
   list-style: none;
 }
 
-.service-page ul li{
+.service-page ul li {
+  background-color: #1a6abf;
+  color: white;
   font-size: 20px;
   margin-top: 20px;
   padding: 10px 10px 10px 10px;
-  box-shadow: 0 0 5px gray;
-  border-radius: 20px;
+  /* box-shadow: 0 0 5px gray; */
+  border-radius: 8px;
   cursor: pointer;
   text-align: center;
 }
 
-.service-link{
+.service-link {
   text-decoration: none;
   color: black;
   width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*! cards */
 .card-container {
-  width: 300px;
-  background-color: #f8f9fa;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  padding: 20px;
-  margin: 20px auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.card-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+.card {
+  max-width: 300px;
+  margin: 1.5rem auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
+
+.card button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 4px gray;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.card-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 6px 0;
+}
+
+.card-text span {
+  font-weight: 500;
+  color: #000;
+}
+
+.card-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #1e40af;
+}
+
+/*! loader */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+/*! profile details */
+.profile-details {
+  height: calc(100vh - 60px);
+  width: 100%;
+}
+
+.profile-card {
+  font-size: 10px;
+  min-width: 350px;
+  height: 480px;
+  /* border: 2px solid red; */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
 
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
+  margin: 0 auto 10px;
   object-fit: cover;
-  margin-bottom: 15px;
   border: 3px solid #007bff;
 }
 
 .username {
-  font-size: 1.4rem;
-  color: #333;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 8px;
 }
 
 .user-type {
-  font-size: 0.9rem;
-  color: #666;
+  color: #555;
   margin-bottom: 15px;
 }
 
-.profile-btn {
-  display: inline-block;
+.user-type span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 6px;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
   background-color: #007bff;
   color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
 }
 
-.profile-btn:hover {
-  background-color: #0056b3;
+.footer {
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
 }
 
-.info-section {
-  margin-top: 15px;
-  text-align: left;
-  font-size: 0.85rem;
-  color: #555;
-}
 
-.info-section p {
-  margin: 6px 0;
-}
 
-.loading {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-top: 50px;
-  color: #555;
+
+
+
+
+
+
+
+
+
+
+
+.searchName{
+  font-size: 15px;
+  padding: 4px;
+  border-radius: 4px;
+  margin: 20px 0 0 20px;
 }

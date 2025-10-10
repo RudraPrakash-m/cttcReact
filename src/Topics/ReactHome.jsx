@@ -23,6 +23,7 @@ import ErrorPage from "./ReactRouter/pages/ErrorPage";
 import WebDev from "./ReactRouter/pages/services/WebDev";
 import Cons from "./ReactRouter/pages/services/Cons";
 import HomeDelivery from "./ReactRouter/pages/services/HomeDelivery";
+import Details from "./ReactRouter/components/Details";
 
 const ReactHome = () => {
   const router = createBrowserRouter([
@@ -32,44 +33,48 @@ const ReactHome = () => {
       children: [
         {
           path: "",
-          element: <Home/>,
+          element: <Home />,
         },
         {
-          path:"/about",
-          element:<About/>
+          path: "/about",
+          element: <About />,
         },
         {
-          path:"/contact",
-          element:<Contact/>
+          path: "/contact",
+          element: <Contact />,
         },
         {
-          path:"/services",
-          element:<Services/>,
-          children:[
+          path: "/services",
+          element: <Services />,
+          children: [
             {
-              path:"/services",
-              element:<WebDev/>
+              path: "/services",
+              element: <WebDev />,
             },
             {
-              path:"/services/con",
-              element:<Cons/>
+              path: "/services/con",
+              element: <Cons />,
             },
             {
-              path:"/services/homeD",
-              element:<HomeDelivery/>
-            }
-          ]
+              path: "/services/homeD",
+              element: <HomeDelivery />,
+            },
+          ],
         },
         {
-          path:"/login",
-          element:<Login/>
+          path: "/view_profile/:id",
+          element: <Details />,
         },
-        {
-          path:"/register",
-          element:<Register/>
-        }
       ],
-      errorElement: <ErrorPage/>
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
     },
   ]);
   return (

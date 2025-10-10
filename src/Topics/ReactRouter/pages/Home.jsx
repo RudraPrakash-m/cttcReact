@@ -1,14 +1,14 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import Card from '../components/Card'
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
 
-  return (
-    <div>
-      <Card/>
-    </div>
-  )
-}
+  const location = useLocation()
+  
+  
 
-export default Home
+  return(
+    <div>Home</div>
+  )
+};
+
+export default Home;
