@@ -2,15 +2,7 @@ import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 
 const Details = () => {
-  // const { id } = useParams();
   const { state } = useLocation();
-
-  const loc = useLocation();
-
-  // console.log(id);
-
-  console.log(state.location.pathname);
-  console.log(loc);
 
   return (
     <div className="profile-details">
